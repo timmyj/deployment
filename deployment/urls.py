@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.list, name='list'),
-    url(r'^hostname/(?P<hostname_id>\d+)/$', views.hostname_query, name='hostname')
+    url(r'^hostname/(?P<hostname_id>\w+)/$', views.hostname_query, name='hostname')
 ]

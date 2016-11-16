@@ -13,7 +13,7 @@ def list(request):
     return HttpResponse(queryset,content_type="application/json")
 
 def hostname_query(request, hostname_id):
-    queryset = machine.objects.get(hostname=hostname_id)
+    queryset = machine.objects.filter(hostname=hostname_id)
     queryset = serializers.serialize('json',queryset)
     return HttpResponse(queryset,content_type="application/json")
 
